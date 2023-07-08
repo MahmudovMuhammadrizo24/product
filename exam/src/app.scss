@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+    
+
+}
+.boxs{
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+section{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+}
+section .main2 {
+width: 30%;
+position: relative;
+
+}
+section .main1{
+    width: 70%;
+}
+.boxs .box img{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.boxs .box .spans{
+    display: flex;
+   gap: 100px;
+   align-items: center;
+}
+.single{
+    
+}
+.single .boxs{
+    display: flex;
+    gap: 10px;
+    padding: 24px;
+    font-size: 16px;
+}
+.single .boxs .imgs .asosiy{
+    width: 250px;
+    height: 260px;
+}
+.single .boxs .imgs .imgss{
+    display: flex;
+    gap: 20px;
+    
+}
+.single .boxs .imgs .imgss img{
+    height: 100px;
+    width: 100px;
+
+}
+.starsP{
+    display: flex;
+    gap: 15px;
+}
+.stars{
+    color: gold;
+}
+.priceP{
+    color: rgb(181, 143, 45);
+    font-weight: 600;
+    font-size: 22px;
+}
+.title{
+    font-size: 38px;
+    font-weight: 600;
+}
