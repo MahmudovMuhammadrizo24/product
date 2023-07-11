@@ -10,56 +10,77 @@ body{
 .boxs{
     display: grid;
     gap: 20px;
-
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,250px);
+   
+}
+.box{
+     border: 1px solid rgb(183, 183, 236);
 }
 section{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     padding: 30px;
 }
 section .main2 {
-width: 30%;
+width: 20%;
 position: relative;
 
 }
 section .main1{
-    width: 70%;
+    width: 80%;
+    padding: 20px;
 }
 .boxs .box img{
-    width: 300px;
+    width: 250px;
     height: 200px;
     border-radius: 20px;
     margin-bottom: 10px;
 }
+
 .boxs .box .spans{
     display: flex;
-   gap: 100px;
+   justify-content: space-between;
    align-items: center;
 }
 .single{
-    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.btn-warning{
+    width: 200px;
+    background-color: #8f6e5a;
+    color: white;
+}.btn-warning:hover{
+    color: black;
+    background-color: #b89984;
 }
 .single .boxs{
     display: flex;
-    gap: 10px;
-    padding: 24px;
+    gap: 200px;
+   align-items: center;
+    padding: 18px;
     font-size: 16px;
 }
 .single .boxs .imgs .asosiy{
-    width: 250px;
-    height: 260px;
+    width: 630px;
+    height: 360px;
+    border-radius: 5px;
 }
 .single .boxs .imgs .imgss{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     
 }
 .single .boxs .imgs .imgss img{
-    height: 100px;
-    width: 100px;
+    height: 115px;
+    width: 115px;
+    border-radius: 3px;
 
+}.single .boxs .imgs .imgss img:hover{
+border: 2px solid rgb(255, 145, 0);
 }
 .starsP{
     display: flex;
@@ -69,11 +90,32 @@ section .main1{
     color: gold;
 }
 .priceP{
-    color: rgb(181, 143, 45);
+    color: rgb(139, 111, 40);
     font-weight: 600;
     font-size: 22px;
 }
 .title{
-    font-size: 38px;
+    font-size: 25px;
     font-weight: 600;
+}
+.titleSp{
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.categoryTy{
+    color: rgb(146, 143, 143);
+ text-decoration: none;
+}
+.categoryTy:hover{
+   text-decoration: underline;
+}
+.searchProduct{
+    background-color: #f1f5f8;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: none;
+}
+.mb-5{
+
 }

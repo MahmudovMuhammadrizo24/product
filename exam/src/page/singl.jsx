@@ -1,3 +1,5 @@
+
+
 import React, { Component } from "react";
 import axios from "axios";
 
@@ -19,36 +21,45 @@ export default class SingleImg extends Component {
                 console.log("sss", err);
             });
     }
+
     handleclickbtn = () => {
-        window.location.reload()
-    }
+        window.location.reload();
+    };
+
     handleclickimg = (img) => {
-        this.setState({ img })
-    }
+        this.setState({ img });
+    };
 
     render() {
         const { pruodeks, img } = this.state;
 
-
-        console.log(pruodeks.images);
-
         return (
             <>
                 <div className="single">
-                    <button onClick={this.handleclickbtn} className="btn btn-warning">Back to Producks</button>
+                    <button
+                        onClick={this.handleclickbtn}
+                        className="btn btn-warning"
+                    >
+                        Back to Products
+                    </button>
                     <div className="boxs">
                         <div className="imgs">
                             <img src={img} className="mb-5 asosiy" alt="" />
-
                             <div className="imgss">
                                 {pruodeks.images &&
                                     pruodeks.images.map((item) => (
-                                        <img onClick={() => this.handleclickimg(item)} className="mb-5" key={item.id} src={item} alt="" />
+                                        <img
+                                            onClick={() => this.handleclickimg(item)}
+                                            className="mb-5"
+                                            key={item.id}
+                                            src={item}
+                                            alt=""
+                                        />
                                     ))}
                             </div>
                         </div>
                         <div className="matnla">
-                            <h1 className="title">{pruodeks.title}</h1>
+                            <h1 className="titleSp">{pruodeks.title}</h1>
                             <div className="starsP">
                                 <div className="stars">
                                     <span>
@@ -111,38 +122,17 @@ export default class SingleImg extends Component {
                                             />
                                         </svg>
                                     </span>
-                                    <span>
-                                        <svg
-                                            stroke="currentColor"
-                                            fill="currentColor"
-                                            strokeWidth={0}
-                                            viewBox="0 0 16 16"
-                                            height="1em"
-                                            width="1em"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 00-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 00-.163-.505L1.71 6.745l4.052-.576a.525.525 0 00.393-.288l1.847-3.658 1.846 3.658a.525.525 0 00.393.288l4.052.575-2.906 2.77a.564.564 0 00-.163.506l.694 3.957-3.686-1.894a.503.503 0 00-.461 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </span>
-
                                 </div>
-                                <p className="reviews">(100 customer reviews)</p>
+                                <p className="reviews">(100 ta mijozning izohlari)</p>
                             </div>
-
                             <p className="priceP">$ {pruodeks.price}</p>
                             <p>{pruodeks.description}</p>
-                            <h3>{pruodeks.brand}</h3>
-
-                            <p>Available :    In stock </p>
-                            <p>SCU :  recQ0fMd8T0Vk211E</p>
-                            <p>Brand :  liddy</p>
+                            <p>Mavjud: Omborda</p>
+                            <p>SCU: recQ0fMd8T0Vk211E</p>
+                            <p>Brend: liddy</p>
                             <section className="sc-kEjbxe jbJDWL">
                                 <div className="colors">
-                                    <span> colors : </span>
+                                    <span>Ranglar:</span>
                                     <div>
                                         <button
                                             style={{ background: "rgb(0, 0, 0)" }}
@@ -193,11 +183,10 @@ export default class SingleImg extends Component {
                                         </button>
                                     </div>
                                     <a className="btn" href="/cart">
-                                        add to cart
+                                        Savatga qo'shish
                                     </a>
                                 </div>
                             </section>
-
                         </div>
                     </div>
                 </div>

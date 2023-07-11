@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { Component } from "react";
 import axios from "axios";
 
@@ -10,7 +11,7 @@ export default class Navbar extends Component {
     handlebtn = () => {
         window.location.reload()
     }
-
+    handelSearch = () => { }
 
 
     render() {
@@ -20,9 +21,11 @@ export default class Navbar extends Component {
             <>
                 <main className="main2">
                     <div className="category">
+                        <input className="searchProduct" type="text" placeholder="Search" />
                         <h1>Category</h1>
+                        <p className="categoryTy">All</p>
                         {categories.map((item) => (
-                            <p onClick={() => oncatigory(item)} >{item}</p>
+                            <p className="categoryTy" onClick={() => oncatigory(item)} >{item}</p>
                         ))}
                     </div>
                     <button onClick={this.handlebtn} className="btn btn-danger">Clear Filters</button>

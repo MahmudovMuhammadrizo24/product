@@ -49,7 +49,7 @@ export default class App extends Component {
 	handlecatigory = (title) => {
 		let { pruodeks } = this.state
 
-		let pruodeks1 = pruodeks.filter((item) => item.category == title)
+		let pruodeks1 = pruodeks.filter((item) => item.category === title)
 		this.setState({ pruodeksCopu: pruodeks1 })
 	}
 	render() {

@@ -17,7 +17,7 @@ const Home = ({ pruodeks, onImg }) => {
                             <img onClick={() => onImg(item.id)} src={item.thumbnail} alt="" />
                             <div className="spans">
                                 <h3 className="title">{item.title}</h3>
-                                <p>{item.price} $</p>
+                                <p>{item.price}$</p>
                             </div>
                         </div>
                     ))}
